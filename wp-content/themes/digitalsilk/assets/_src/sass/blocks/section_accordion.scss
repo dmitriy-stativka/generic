@@ -1,0 +1,110 @@
+.section_accordion{
+    max-width: 950px;
+    margin: 0px auto 50px auto;
+    padding: 0px 15px 0 15px;
+
+    @include media("<tablet") {
+        padding: 50px 15px 0 15px;
+        margin: -100px auto 0 auto;
+    }
+
+    input[type="checkbox"]{
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &:checked {
+            + .section_accordion--item-label {
+                color: $purple;
+        
+                &:before {
+                    transform: rotate(0);
+                    transition: transform .3s ease;
+                    background: $purple;
+                }
+
+                &:after{
+                    transform: rotate(-45deg);
+                    opacity: 0;
+                    transition: all .3s ease;
+                }
+            }
+
+            ~ .section_accordion--item-content {
+                max-height: 100vh;
+                padding: 0 0 10px 0;
+            }
+        }
+    }
+
+    &--title{
+        font-size: 48px;
+        font-family: 'merriweatherbold';
+        color: $darkBlue;
+        display: block;
+        text-align: center;
+        margin-bottom: 60px;
+
+        @include media("<tablet") {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &--item{
+        width: 100%;
+        color: $white;
+        overflow: hidden;
+        border-bottom: 1px solid #C4C4C4;
+
+        &-label {
+            @include flex-between;
+            font-size: 24px;
+            line-height: 30px;
+            cursor: pointer;
+            position: relative;
+            font-family: 'robotobold';
+            color: $darkBlue;
+            padding: 25px 25px 25px 0;
+
+            @include media("<tablet") {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            &:after,
+            &:before {
+              content: '';
+              width: 15px;
+              height: 2px;
+              border-radius: 2px;
+              background: $darkBlue;
+              opacity: 1;
+              transition: opacity .3s ease;
+              position: absolute;
+              right: 0;
+              transform: rotate(0deg);
+              transition: transform .3s ease, opacity .3s ease;
+            }
+
+            &:before{
+                transform: rotate(90deg);
+            }
+        }
+
+        &-content {
+            max-height: 0;
+            padding: 0;
+            transition: padding .3s ease, max-height .3s ease;
+            font-size: 18px;
+            line-height: 30px;
+            color: $darkBlue;
+
+            @include media("<tablet") {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+    }
+}

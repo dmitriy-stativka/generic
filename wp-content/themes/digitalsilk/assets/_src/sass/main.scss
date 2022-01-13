@@ -1,0 +1,17 @@
+// Core settings
+@import 'core/core';
+
+// Site Structure
+@import 'layout/footer';
+
+// Pages
+
+@import 'pages/404';
+
+
+// @import './core/variables/colors';
+
+
+//Blocks
+@import 'blocks/section_hero',
+        'blocks/section_accordion';

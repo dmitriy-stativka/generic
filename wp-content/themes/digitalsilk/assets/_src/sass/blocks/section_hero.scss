@@ -1,0 +1,280 @@
+.section_hero{
+    min-height: 500px;
+    max-height: 700px;
+    height: calc(100vh - 130px);
+    position: relative;
+    padding: 100px 0 0 0;
+
+    @include media("<tablet") {
+        padding-top: 50px;
+        max-height: 500px;
+    }
+
+    &:before{
+        content: '';
+        background: linear-gradient(270deg, #1A3262 0%, #8E5C95 102.4%);
+        -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
+        clip-path: polygon(60% 0, 100% 50%, 60% 100%, 0 100%, 0 0);
+        position: absolute;
+        bottom: 0;
+        top: -50%;
+        width: 50%;
+    }
+
+    @include media("<desktop") {
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &-content{
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+    
+    &-pretitle{
+        color: $blueText;
+        margin-bottom: 20px;
+        display: block;
+    }
+    
+    &-title{
+        font-family: 'merriweatherbold';
+        color: $white;
+        font-size: 55px;
+        line-height: 69px;
+
+        @include media("<tablet") {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        span{
+            color: $green;
+        }
+    }
+
+    // Products
+
+    &-products{
+        background: $white;
+        padding: 60px 0 80px 0;
+        position: relative;
+        z-index: 2;
+        border-radius: 8px;
+        box-shadow: 0 30px 60px rgba(0,0,0, .11);
+        text-align: center;
+
+        @include media("<tablet") {
+            padding-bottom: 20px;
+        }
+
+
+        &--image{
+            filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
+            transition: filter .5s ease;
+        }
+
+        &--pretitle{
+            color: $blueText;
+            font-family: 'robotobold';
+            font-size: 18px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        &--title{
+            font-family: 'merriweatherbold';
+            color: $darkBlue;
+            font-size: 45px;
+            line-height: 57px;
+            margin-bottom: 30px;
+
+            @include media("<tablet") {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            &-product{
+                font-size: clamp(21px, 2vw, 28px);
+                line-height: 35px;
+                color: $blueText;
+                font-family: 'merriweatherregular';
+                color: $darkBlue;
+                margin: 25px 0;
+            }
+        }
+
+        &--list{   
+            display: flex;
+
+            @include media("<desktop") {
+                flex-direction: column;
+            }
+        }
+
+        &--item{
+            flex-basis: 33.33%;
+            margin: 0 -15px;
+
+            @include media("<desktop") {
+                margin-bottom: 50px;
+            }
+        }
+
+        &--link{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            margin: 0 50px;
+            padding: 0 15px;
+            position: relative;
+
+            @include media("<desktop") {
+                margin: 0 10px;
+            }
+
+            .section_hero-products--info{
+                transform: translate(0, 0px);
+                transition: transform .5s ease;
+            }
+
+            // Animation arrow down Hover START
+
+            &:after{
+                content: '';
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                background: linear-gradient(180deg, #FFFFFF 0%, #EFF5FA 100%);
+                clip-path: polygon(100% 0, 100% 75%, 49% 100%, 0 75%, 0 0);
+                position: absolute;
+                left: 2px;
+                right: 2px;
+                top: calc(40% + 2px);
+                height: 0;
+                z-index: -1;
+                visibility: hidden;
+                transition: height .5s ease, visibility .5s ease;
+            }
+
+            &:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: $purple;
+                clip-path: polygon(100% 0, 100% 75%, 49% 100%, 0 75%, 0 0);
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 0;
+                top: 40%;
+                z-index: -1;
+                visibility: hidden;
+                transition: height .5s ease, visibility .5s ease;
+            }
+
+            @include media(">desktop") {
+                &:hover{
+                    .section_hero-products{
+                        &--image{
+                            filter: drop-shadow(0px 15px 30px rgba(13, 44, 86, 0.16));
+                            transition: filter .3s ease;
+                        }
+
+                        &--hex{
+                            transform: scale(1.25);
+                            background: transparent;
+                            transition: transform .5s ease, background .5s ease;
+                        }
+
+                        &--info{
+                            transform: translate(0, 50px);
+                            transition: transform .5s ease;
+                        }
+                    }
+
+                    &:after{
+                        height: 446px;
+                        visibility: visible;
+                        transition: height .5s ease, visibility .5s ease;
+                    }
+
+                    &:before{
+                        height: 450px;
+                        visibility: visible;
+                        transition: height .5s ease, visibility .5s ease;
+                    }
+    
+                    .btn{
+                        color: $white;
+                        max-width: 260px;
+                        transition: max-width .5s ease;
+    
+                        &:before{
+                            background: linear-gradient(90deg, #193261 -6.1%, #81338B 100%);
+                        }
+                    }
+                }
+            }
+
+            // Animation arrow down Hover END
+        }
+
+        &--hex{
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            width: 240px;
+            height: 278px;
+            background: rgba(80, 178, 159, 0.2);;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transform: scale(1);
+            transition: transform .5s ease, background .5s ease;
+
+            &-background{
+                position: absolute;
+                background-color: $white;
+                top: 2px;
+                left: 2px;
+                width: 236px;
+                height: 274px;
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            }
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                object-fit: cover;
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            }
+        }
+    }
+}
+
+.section_product{
+    transform: translate(0, -20%);
+
+    @include media("<desktop") {
+        transform: translate(0, -8%);
+    }
+
+    @include media("<tablet") {
+        transform: translate(0, -12%);
+    }
+}

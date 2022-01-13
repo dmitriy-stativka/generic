@@ -1,0 +1,81 @@
+.svg-arrow {
+	background: url("svg-sprite.svg") 99.21830146182042% 0 no-repeat;
+}
+
+.svg-arrow-dims {
+	width: 12.428px;
+	height: 24.24px;
+}
+
+.svg-arrow-orange-right {
+	background: url("svg-sprite.svg") 77.47017139303804% 61.97427079352948% no-repeat;
+}
+
+.svg-arrow-orange-right-dims {
+	width: 25.809px;
+	height: 20.49px;
+}
+
+.svg-mail {
+	background: url("svg-sprite.svg") 23.479907931332118% 98.91457640777678% no-repeat;
+}
+
+.svg-mail-dims {
+	width: 19.584px;
+	height: 19.584px;
+}
+
+.svg-messages {
+	background: url("svg-sprite.svg") 0 0 no-repeat;
+}
+
+.svg-messages-dims {
+	width: 59.931px;
+	height: 48.656px;
+}
+
+.svg-phone {
+	background: url("svg-sprite.svg") 0 98.91706751958094% no-repeat;
+}
+
+.svg-phone-dims {
+	width: 19.586px;
+	height: 19.586px;
+}
+
+.svg-search {
+	background: url("svg-sprite.svg") 46.95629240691457% 98.91208542144098% no-repeat;
+}
+
+.svg-search-dims {
+	width: 19.582px;
+	height: 19.582px;
+}
+
+.svg-social-facebook {
+	background: url("svg-sprite.svg") 82.02197982673435% 0 no-repeat;
+}
+
+.svg-social-facebook-dims {
+	width: 29.933px;
+	height: 29.933px;
+}
+
+.svg-social-linkedin {
+	background: url("svg-sprite.svg") 40.90368120819141% 70.40981708728872% no-repeat;
+}
+
+.svg-social-linkedin-dims {
+	width: 29.899px;
+	height: 29.896px;
+}
+
+.svg-social-twitter {
+	background: url("svg-sprite.svg") 0 70.41185493907555% no-repeat;
+}
+
+.svg-social-twitter-dims {
+	width: 29.901px;
+	height: 29.898px;
+}
+

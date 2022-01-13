@@ -1,0 +1,73 @@
+.btn {
+	@include flex-center;
+	position: relative;
+	z-index: 3;
+	white-space: nowrap;
+	color: $purple;
+	max-width: 215px;
+	margin: 0 auto;
+	height: 60px;
+	width: 100%;
+	overflow: hidden;
+	padding: 0 25px;
+	clip-path: polygon(25px 0px, calc(100% - 25px) 0px, 100% 50%, calc(100% - 25px) 100%, 25px 100%, 0px 50%);
+	transition: max-width .5s ease;
+
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		background: $purple;
+		z-index: -1;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+		top: 2px;
+		clip-path: polygon(24px 0px, calc(100% - 24px) 0px, 100% 50%, calc(100% - 24px) 100%, 24px 100%, 0px 50%);
+		background: $white;
+		z-index: 2;
+		transition: background .3s ease;
+	}
+
+	span{
+		position: relative;
+		z-index: 5;
+	}
+	
+	&:hover{
+		color: $white;
+
+		&:before{
+			background: linear-gradient(90deg, #193261 -6.1%, #81338B 100%);
+		}
+	}
+	
+	&.purple{
+		color: $white;
+
+		&:before{
+			background: linear-gradient(90deg, #193261 -6.1%, #81338B 100%);
+		}
+
+		&:hover{
+			&:before{
+				background: $purple;
+				transition: background .3s ease;
+			}
+		}
+	}
+
+	i{
+		margin-right: 15px;
+		position: relative;
+		z-index: 3;
+	}
+}

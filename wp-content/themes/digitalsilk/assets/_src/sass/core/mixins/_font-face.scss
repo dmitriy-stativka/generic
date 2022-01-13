@@ -1,0 +1,73 @@
+@font-face {
+	font-family: 'fontello';
+	src: url('/wp-content/themes/digitalsilk/assets/fonts/fontello/fontello.eot?36253400');
+	src: url('/wp-content/themes/digitalsilk/assets/fonts/fontello/fontello.eot?36253400#iefix') format('embedded-opentype'),
+		 url('/wp-content/themes/digitalsilk/assets/fonts/fontello/fontello.woff2?36253400') format('woff2'),
+		 url('/wp-content/themes/digitalsilk/assets/fonts/fontello/fontello.woff?36253400') format('woff'),
+		 url('/wp-content/themes/digitalsilk/assets/fonts/fontello/fontello.ttf?36253400') format('truetype'),
+		 url('/wp-content/themes/digitalsilk/assets/fonts/fontello/fontello.svg?36253400#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	display: inline-block;
+	text-decoration: inherit;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-support:before { content: '\e800'; }
+  .icon-download:before { content: '\e801'; }
+  .icon-about:before { content: '\e802'; }
+  .icon-register:before { content: '\e803'; }
+  .icon-cart:before { content: '\e804'; }
+  .icon-login:before { content: '\e805'; }
+  .icon-tel:before { content: '\e806'; }
+  .icon-search:before { content: '\e807'; }
+
+
+
+// Fonts 
+
+@font-face {
+    font-family: 'merriweatherbold';
+    src: url('/wp-content/themes/digitalsilk/assets/fonts/merriweather-bold-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/merriweather-bold-webfont.woff') format('woff'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/merriweather-bold-webfont.svg#merriweatherbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'merriweatherregular';
+    src: url('/wp-content/themes/digitalsilk/assets/fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/merriweather-regular-webfont.woff') format('woff'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/merriweather-regular-webfont.svg#merriweatherregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('/wp-content/themes/digitalsilk/assets/fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/roboto-bold-webfont.woff') format('woff'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('/wp-content/themes/digitalsilk/assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/roboto-regular-webfont.woff') format('woff'),
+         url('/wp-content/themes/digitalsilk/assets/fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

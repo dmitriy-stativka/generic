@@ -1,0 +1,305 @@
+.footer {
+	margin: 100px 0 0 0;
+	overflow: hidden;
+
+	@include media("<desktop") {
+		margin: 50px 0 0 0;
+	}
+
+	& > .inner-frame{
+		background: $lightBlue;
+		position: relative;
+
+		&:after{
+			content: '';
+			width: 300px;
+			height: 100%;
+			background: #EFF5FA;
+			position: absolute;
+			right: 0%;
+			top: 0;
+			bottom: 0;
+			clip-path: polygon(0 0, 0% 100%, 100% 100%);
+			transform: translate(100%, 0);
+		}
+
+		&:before{
+			content: '';
+			width: 300px;
+			height: 100%;
+			background: #EFF5FA;
+			position: absolute;
+			left: 1px;
+			top: 0;
+			bottom: 0;
+			clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+			transform: translate(-100%, 0);
+		}
+	}
+
+	&-bottom{
+		@include flex-between;
+		padding-bottom: 50px;
+
+		@include media("<desktop") {
+			flex-direction: column;
+		}
+
+		&--tel{
+			font-size: 18px;
+			line-height: 25px;
+			color: $darkGrey;
+
+			@include media("<desktop") {
+				margin: 10px 0;
+			}
+
+			&:hover{
+				color: $darkBlue;
+			}
+
+			i{
+				margin-right: 8px;
+			}
+		}
+
+		&--item,
+		&-navbar{
+			@include flex-center-vert;
+			flex-basis: 50%;
+
+			@include media("<desktop") {
+				flex-direction: column;
+			}
+		}
+
+		&--item{
+			justify-content: center;
+			flex-basis: 45%;
+		}
+
+		&-navbar{
+			.menu-item{
+				padding-right: 40px;
+				position: relative;
+
+				&:after{
+					content: '';
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					position: absolute;
+					right: 15px;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					background: $darkGrey;
+				}
+
+				@include media("<desktop") {
+					padding-right: 0;
+
+					&:after{
+						display: none;
+					}
+				}
+
+				&:last-child{
+					&:after{
+						display: none;
+					}	
+				}
+			}
+
+			a{
+				color: $darkGrey;
+
+				&:hover{
+					color: $darkBlue;
+				}
+			}
+		}
+
+		.copyright{
+			color: $text-color;
+			font-size: 16px;
+			line-height: 19px;
+			opacity: .6;
+			margin-right: 60px;
+
+			@include media("<desktop") {
+				flex-direction: column;
+				order: 3;
+				margin: 0;
+			}
+		}
+	
+	}
+
+	&-top{
+		@include flex-between;
+		padding: 100px 0 150px 0;
+
+		@include media("<desktop") {
+			padding: 50px 0 10px 0;
+			flex-direction: column;
+		}
+
+		&--logo{
+			max-width: 300px;
+
+			@include media("<desktop") {
+				max-width: 200px;
+				margin-bottom: 25px;
+			}
+		}
+
+		&-right{
+			display: flex;
+		}
+
+		address{
+			font-size: 18px;
+			line-height: 21px;
+			color: $darkGrey;
+			max-width: 220px;
+		}
+	}
+
+	&-top{
+		&-right{
+			margin: 0 -20px;
+			padding-left: 20px;
+
+			@include media("<desktop") {
+				padding: 0;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+
+			&--item{
+				padding: 0 20px;
+
+				@include media("<desktop") {
+					margin-bottom: 20px;
+				}
+
+				&-top{
+					font-size: 21px;
+					line-height: 26px;
+					color: $darkGrey;
+				    font-family: 'merriweatherbold';
+					display: block;
+					margin-bottom: 25px;
+
+					@include media("<desktop") {
+						font-size: 18px;
+					    margin-bottom: 10px;
+					}
+				}
+			}
+		}
+		.btn{
+			max-width: 320px;
+		}
+	}
+}
+
+
+
+
+//   .hexWrapper {
+// 	text-align: center;
+// 	margin: 0px;
+// 	position: relative;
+// 	display: inline-block;
+// 	width: 150px;
+// 	height: 150px;
+// 	min-width: 150px;
+// 	min-height: 150px;
+// 	float:left;
+// }			
+	
+// .hexagon {
+// 	height: calc(100%/1.732050807);
+// 	width: 100%;
+// 	background-color: #ffffff;
+// 	display:inline-block;
+// }
+
+// .hexagon:before,
+// .hexagon:after {
+// 	content: "";
+// 	position: absolute;
+// 	background-color: inherit;
+// 	height: inherit;
+// 	width: inherit;
+// 	left: -1px; right: -1px; top: 0; bottom: 0;
+// }
+
+// .hexagon:before {
+// 	transform: rotateZ(60deg);
+// }
+
+// .hexagon:after {
+// 	transform: rotateZ(120deg);
+// }
+
+// .hexagon,
+// .hexagon:before,
+// .hexagon:after {
+// 	box-sizing: content-box;
+// 	border: solid 2px #B2C944;
+// 	border-top-width: 0;
+// 	border-bottom-width: 0;
+// 	z-index: -1; /*We need to force the z-index so we can put some text over*/
+// }
+
+// #container{
+// 	padding-top: 60px;
+// 	width:100%;
+// 	min-width:910px; /* so the page doesn't get too small. This should be done better with medai queries*/
+// }
+
+// .row{
+// 	clear:both; /*to reset all the configs*/
+// 	float:left;
+// 	display: flex; /* using some flex to aling to center */
+// 	justify-content: center;
+// 	overflow:hidden; /*this is for after, when we add more hex's*/
+// 	padding-top:45px; /* To take care of the top part of the hex, needs changing if we change the size on the wrapper*/
+// 	position:relative; 
+// }
+
+// .fullWidth{
+// 	width: 100%;
+// }
+
+// .hexagon.inner{
+// 	height: 100%;
+// 	transform: scale(.8, .8);
+// 	position: relative; /*this is needed to make z-index work*/
+// 	margin:0;
+// 	margin-left:-2px; /*taking back the border pixels*/
+// }
+
+// .hexagon.inner,
+// .hexagon.inner:before,
+// .hexagon.inner:after{
+// 	z-index:10;
+// }
+
+// .text{
+// 	z-index: 50;
+// 	position: absolute;
+// 	margin-left: 15%;
+// 	margin-right: 15%;
+// 	top: 0;
+// 	left: 0;
+// 	width:70%;
+// 	height:60%;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }

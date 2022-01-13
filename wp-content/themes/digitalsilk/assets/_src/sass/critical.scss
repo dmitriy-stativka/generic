@@ -1,0 +1,15 @@
+// Base styles for the first viewport
+
+// Core settings
+@import 'core/core';
+@import 'core/font-face';
+
+// General components
+@import 'elements/buttons';
+
+// Helpers and utilities
+@import 'helpers/reboot';
+
+// Site Structure
+@import 'layout/base',
+        'layout/header';
